@@ -1,5 +1,5 @@
 # Instructions
-If you followed the last project, you were tasked with using a set of data (either one you made yourself, one we provided, or one you generated with ChatGPT or downloaded from a site such as [Kaggle](https://www.kaggle.com/datasets)).
+If you followed the last project, you were tasked with using a set of data (either one you made yourself, one we provided, or one you generated with [ChatGPT](https://chat.openai.com/) or downloaded from a site such as [Kaggle](https://www.kaggle.com/datasets)).
 
 This project follows on from that, but this time you should model your database using Mongoose models, and persist your data in the database.
 
@@ -11,7 +11,7 @@ As before, it's up to you to decide what sort of data you'd like to store in you
 - 1375 Netflix titles and some data about them
 - 50 popular Spotify tracks and some data about the music type
 
-If you'd like to build your own data set - feel free! You could write it yourself, or use AI to help you greate some mock data to use. ChatGPT can help with this, just be specific and give it an example.
+If you'd like to build your own data set - feel free! You could write it yourself, or use AI to help you greate some mock data to use. [ChatGPT](https://chat.openai.com/) can help with this, just be specific and give it an example.
 
 In order to get all this data into your database, you'll need to write some code to generate the data - see the '**Making seed data**' section further down for tips on how to do this.
 
