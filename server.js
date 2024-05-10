@@ -13,7 +13,7 @@ import booksData from "./data/books.json";
 // import topMusicData from "./data/top-music.json";
 
 const mongoUrl = process.env.MONGO_URL || "mongodb://localhost/project-mongo";
-mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(mongoUrl);
 mongoose.Promise = Promise;
 
 const Author = mongoose.model('Author', {
