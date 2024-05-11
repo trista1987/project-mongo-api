@@ -14,7 +14,6 @@ import dotenv from "dotenv"
 import netflixData from "./data/netflix-titles.json";
 
 dotenv.config()
-await connectDB()
 
 const mongoUrl = process.env.MONGO_URL || "mongodb://localhost/project-mongo";
 mongoose.connect(mongoUrl);
@@ -41,8 +40,8 @@ const Netflix = mongoose.model('Netflix', netflixSchema)
 // seed the database. seeding can be removed when it's done
 if(process.env.RESET_DATABASE){
   const seedDatabase = async () => {
-  await connectDB()
-  await Netflix.deleteMany().maxTimeMS(50000)
+
+  await Netflix.deleteMany()
   netflixData.forEach(netflix => {
     new Netflix(netflix).save()
   })
@@ -124,8 +123,6 @@ app.get("/country", async(req, res) => {
   }else{
     res.status(404).send('no dramas/movies was found.')
   }
-
-  
 })
 
 //search by title
