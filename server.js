@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import mongoose, { Schema } from "mongoose";
 import expressListEndpoints from 'express-list-endpoints';
+import dotenv from "dotenv"
 
 // If you're using one of our datasets, uncomment the appropriate import below
 // to get started!
@@ -11,6 +12,9 @@ import expressListEndpoints from 'express-list-endpoints';
 // import topMusicData from "./data/top-music.json";
 
 import netflixData from "./data/netflix-titles.json";
+
+dotenv.config()
+
 const mongoUrl = process.env.MONGO_URL || "mongodb://localhost/project-mongo";
 mongoose.connect(mongoUrl);
 mongoose.Promise = Promise;
