@@ -40,7 +40,7 @@ const Netflix = mongoose.model('Netflix', netflixSchema)
 // seed the database. seeding can be removed when it's done
 if(process.env.RESET_DATABASE){
   const seedDatabase = async () => {
-  await Netflix.deleteMany({}).maxTimeMS(20000)
+  await Netflix.deleteMany().maxTimeMS(50000)
   netflixData.forEach(netflix => {
     new Netflix(netflix).save()
   })
