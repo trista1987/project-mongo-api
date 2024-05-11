@@ -14,6 +14,7 @@ import dotenv from "dotenv"
 import netflixData from "./data/netflix-titles.json";
 
 dotenv.config()
+await connectDB()
 
 const mongoUrl = process.env.MONGO_URL || "mongodb://localhost/project-mongo";
 mongoose.connect(mongoUrl);
